@@ -1,0 +1,4 @@
+<app-file-table *ngFor="let fileArray of files" [fileArray]="fileArray"></app-file-table>
+<div *ngIf="files.length === 0">
+    <h2>No files are currently uploaded</h2> 
+</div>

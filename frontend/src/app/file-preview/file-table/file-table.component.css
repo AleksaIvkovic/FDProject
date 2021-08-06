@@ -1,0 +1,24 @@
+.tableContainer {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 25%;
+    overflow: auto;
+}
+
+.table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.table td, .table th {
+    border: 1px solid #ddd;
+    padding: 3px;
+    width: 33%;
+}
+
+.table th {
+    background-color:lightgray;
+}

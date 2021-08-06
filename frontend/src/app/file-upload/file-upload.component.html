@@ -1,0 +1,12 @@
+<div *ngIf="configuration" class="uploadContainer">
+	<div class="upload">
+		<ngx-dropzone [multiple]="true" [accept]="configuration.acceptedTypes" [maxFileSize]="configuration.maxSize" (change)="onSelect($event)" [expandable]="true">
+			<ngx-dropzone-label>Drop your files here</ngx-dropzone-label>
+			<ngx-dropzone-preview *ngFor="let f of files" [file]="f" [removable]="true" (removed)="onRemove(f)" style="overflow-y: auto;">
+				<ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+			</ngx-dropzone-preview>
+		</ngx-dropzone>
+	</div>
+	<br />
+	<button (click)="onUpload()">Upload</button>
+</div>

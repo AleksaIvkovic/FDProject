@@ -1,0 +1,8 @@
+.uploadContainer {
+    height: 100%;
+}
+
+.upload {
+    max-height: 95%;
+    overflow-y: auto;
+}

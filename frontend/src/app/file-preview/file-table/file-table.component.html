@@ -1,0 +1,32 @@
+<div class="tableContainer">
+    <h3>{{fileArray?.type}}</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Size (bytes)
+                </th>
+                <th>
+                    Date and time
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let f of fileArray?.files">
+                <td>
+                    {{f.name}}
+                </td>
+                <td>
+                    {{f.size}} 
+                </td>
+                <td>
+                    {{f.creationDate| date : 'dd.MM.yyyy, HH:mm:ss'}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
